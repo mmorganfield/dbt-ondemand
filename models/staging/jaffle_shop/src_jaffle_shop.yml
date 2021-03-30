@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: maxm
+    description: Max Morganfield dataset
+    database: finl-1067321-eds-thunderdome
+    tables:
+      - name: customers
+        columns:
+            - name: id
+              description: primary key
+              tests:
+                - unique
+                - not_null
+      - name: orders
+        description: raw orders data
+        columns:
+            - name: id
+              description: primary key
+              tests:
+                - unique
+                - not_null
+      - name: payments
+        
